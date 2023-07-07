@@ -1,0 +1,36 @@
+.main-haeding-terms{
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $secondary-heading-colr;
+    margin-bottom: 3.2rem;
+    line-height: 4.8rem;
+    font-family: "segoeui" !important;
+}
+
+
+.terms-and-privacy-spacing{
+    padding: 9.2rem 0 8.6rem;
+    .terms-policy-para{
+        p{
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: $text-9;
+            line-height: 2.6rem;
+            text-align: justify;
+            
+        }
+       
+    }
+}
+
+// .rtl{
+//     text-align: right;
+//     direction: rtl;
+//     .terms-policy-para{
+//         p{
+            
+//             text-align: right;
+//         }
+       
+//     }
+// }

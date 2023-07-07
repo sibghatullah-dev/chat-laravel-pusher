@@ -1,0 +1,166 @@
+.latest-news{
+    background-color: $footer-bg;
+    padding: 10rem 0 7.6rem;
+    .col-sm-6.col-md-3.col-lg-3{
+        @include m-575{
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        @include m-380{
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.primary-haeding{
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $black;
+    font-weight:700;
+    position: relative;
+    // display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 2.4rem;
+    @include medium-991{
+        font-size: 3.3rem;
+    }
+   
+    
+    &:after{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        height: 0.6rem;
+        width: 20rem;
+        left: 0;
+        right: 0;
+        background-color: $primary;
+        // border-bottom: 0.6rem solid $primary;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.new-para{
+    margin: 1.8rem 0 2.4rem 0;
+    max-height: 10.3rem;
+    overflow: hidden;
+    p{
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: $text-p-news;
+        font-weight:300;
+        line-height: 2.6rem;
+        @include small-767{
+            font-size: 2rem;
+        }
+        @include m-425 {
+            font-size: 2.3rem;
+            line-height: 3.3rem;
+          }
+    }
+}
+.news-ancher-hover{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $primary;
+    font-weight:400;
+    display: flex;
+    align-items: center;
+    @include small-767{
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+    }
+    @include m-425 {
+        font-size: 2.3rem;
+        line-height: 3.3rem;
+      }
+    &:hover{
+        color: $black;
+        transition: ease-in-out .4s;
+    }
+    span{
+        padding: 3px 6px 0;
+    }
+
+}
+
+.news-card-main{
+    margin-bottom: 3rem;
+    .news-card-link{
+        &:hover{
+            // .news-img{
+            //     opacity: 0;
+            // }
+            .card .news-img .middle{
+                opacity: 1;
+                transition: ease-in-out .4s;
+            }
+        }
+        .card{
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            @include small-767{
+                width: 26.2rem;
+                margin: 0 auto ;
+            }
+            .news-img{
+                width: 100%;
+                max-width: 26.2rem;
+                height: 26.2rem;
+                background-color: $footer_border;
+                transition: .5s ease;
+                backface-visibility: hidden;
+                position: relative;
+                @include medium-991{
+                    height: 18.6rem;
+                }
+                @include small-767{
+                    height: 26.2rem;
+                }
+                .middle{
+                    transition: .5s ease;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba($color: $primary, $alpha: 0.50);
+                    .button-img{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50% , -50%);
+                    }
+
+                }
+            }
+            .card-body{
+                padding: 2rem 0 0 0;
+                .calander-date{
+                    .Subscription-text-upper2{
+                        color: $secondary-heading-colr;
+                        font-weight: 400;
+                        font-weight:400;
+                        font-size: 1.6rem;
+                        margin-bottom: 0.9rem;
+                    }
+                }
+                .Subscription-content-para-box{
+                    max-height: 5.5rem;
+                    overflow: hidden;
+                    .Subscription-conyent-para{
+                        color: $black;
+                        font-weight: 700;
+                        font-weight:700;
+                        font-size: 2rem; 
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

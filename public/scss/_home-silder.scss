@@ -1,0 +1,177 @@
+.home-slider {
+  position: relative;
+  max-width: 1920px;
+    margin: 0 auto;
+  .carousel {
+    .carousel-indicators {
+      &.ctm-indicators {
+        counter-reset: my-sec-counter;
+        position: absolute;
+        top: 50.2%;
+        left: 7.3rem;
+        right: auto;
+        bottom: auto;
+        margin: 0 !important;
+        transform: translateY(-50%);
+        flex-direction: column;
+        li {
+          counter-increment: my-awesome-counter;
+          text-indent: unset;
+          position: relative;
+          width: auto;
+          height: auto;
+          margin: 0;
+          background-color: transparent;
+          border: none;
+          opacity: 1;
+          transition: ease-in-out 0.4s;
+          &:not(:last-of-type) {
+            margin-bottom: 3.1rem;
+          }
+          &::before {
+            counter-increment: my-sec-counter;
+            content: "0" counter(my-sec-counter);
+            @include white(color, $black);
+            @include font-20;
+            @include white(color, $black);
+            @include font-weight(400);
+            line-height: 2.7rem;
+          }
+
+          &.active {
+            margin-left: 1rem;
+            &::before {
+              font-size: 3rem;
+              @include font-weight(700);
+            }
+            &::after {
+              content: "";
+              width: 7.2rem;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(100% + 0.9rem);
+            width: 0rem;
+            height: 1px;
+            @include white(background, $black);
+            transition: ease-in-out 0.4s;
+          }
+        }
+      }
+    }
+    .carousel-inner {
+      .carousel-item {
+        height: 72rem;
+        background-size: cover !important;
+        background-position: center !important;
+        .slider-inner-content {
+          .banner-title {
+            font-size: 5.4rem;
+            font-weight: 700;
+            @include white(color, $white);
+            text-shadow: 3px 4px 0px rgba(255, 255, 255, 0.1);
+            margin-bottom: 3.3rem;
+            line-height: 7.2rem;
+          }
+        }
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      bottom: 0px;
+      top: auto;
+      left: auto;
+      right: 0;
+      opacity: 1;
+      width: auto;
+      i {
+        height: 6rem;
+        width: 6rem;
+        line-height: 6rem;
+        @include primary-bg;
+        font-size: 4rem;
+        &:hover {
+          @include secondary-bg;
+        }
+      }
+    }
+    .carousel-control-next {
+      right: 7rem;
+    }
+  }
+}
+.margin-left-banner{
+  @include large-1370{
+    margin-left: 6rem;
+  }
+  @include large-1290{
+    margin-left: 8rem;
+  }
+  @include large-1199{
+    margin-left: 0rem;
+  }
+}
+.rtl {
+  .margin-left-banner{
+    @include large-1370{
+      margin-left: 0rem;
+      margin-right: 6rem;
+    }
+    @include large-1290{
+      margin-right: 10rem;
+      margin-left: 0rem;
+    }
+    @include large-1199{
+      margin-right: 0rem;
+
+    }
+  }
+  .home-slider {
+    
+    .carousel {
+      .carousel-indicators {
+        &.ctm-indicators {
+          right: 7.3rem;
+          left: auto;
+
+          li {
+            &.active {
+              margin-left: 0rem;
+              margin-right: 1rem;
+            }
+
+            &::after {
+              content: "";
+              right: auto;
+              left: calc(100% + 0.9rem);
+            }
+          }
+        }
+      }
+      // .carousel-inner {
+      //   .carousel-item {
+      //     transform: scaleX(-1);
+      //     .slider-inner-content {
+      //       transform: scaleX(-1);
+      //     }
+      //   }
+      // }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        right: auto;
+        left: 0;
+      }
+      .carousel-control-next {
+        right: auto;
+        left: 7rem;
+      }
+    }
+  }
+}

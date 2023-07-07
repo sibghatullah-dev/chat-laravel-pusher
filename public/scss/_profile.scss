@@ -1,0 +1,250 @@
+// profile-page cssssss
+.top-bottom-padds-profile{
+  padding: 10rem 0 ;
+}
+.user-profile{
+    width: 100%;
+      .profile-img-mt{
+          width: 26.1rem;
+          height: 26.1rem;
+          min-width: 26.1rem;
+          overflow: hidden;
+          border-radius: 100%;
+          margin-right: 3.0rem;
+          // background: #548CFF;
+          // box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
+      }
+      .user-profile-detail-mt{
+          .title{
+              color: $heading;
+              font-weight: 700;
+              text-transform: capitalize;
+              font-size: 2.4rem;
+              width: 100%;
+              margin-bottom: 0.8rem;
+          }
+          .pro-email{
+              font-size: 1.6rem;
+              font-weight: 400;
+              width: 100%;
+              margin-bottom: 1.9rem;
+              border-bottom: 1px solid $footer-bg;
+              padding-bottom: 2.0rem;
+              a{
+                color: $text-p;
+                &:hover{
+                  color: $primary;
+                }
+              }
+          }
+          .addres{
+             
+              font-size: 1.6rem;
+              width: 100%;
+              color: $heading;
+              margin-bottom: 0.9rem;
+              font-weight: 400;
+              span{
+                  color: $text-p;
+                  font-weight: 300;
+              }
+              a{
+               &:hover{
+                 color: $primary !important;
+               }
+              }
+          }
+          .profile-btn {
+            padding: 0rem 1rem;
+            height:5rem;
+            line-height:5rem;
+            width: 15rem;
+            border-radius: 0px;
+            margin-top: 2rem;
+            font-size: 2rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            background-color: $primary;
+            color: $white;
+            &:hover{
+              background-color: $heading;
+            }
+        }
+      }
+  
+  }
+  .size-img{
+    font-size: 1.4rem !important;
+    margin-top: -3px;
+    font-weight: 300;
+    margin-bottom: 0rem;
+    margin-top: 3px;
+  }
+  .input-style-ha{
+    align-items: center;
+    margin-bottom: 1rem;
+    .img-flex{
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 0rem;
+      color: $heading;
+      span{
+        font-size: 1.4rem;
+        line-height: 2rem;
+        position: relative;
+        top: 1px;
+        padding: 0 5px;
+      }
+    }
+  }
+  .user-profile-detail-mt {
+    width: 100%;
+    .profile-btn {
+        padding: 0rem 1rem;
+        height:5rem;
+        line-height:5rem;
+        width: 15rem;
+        min-width: 15rem;
+        border-radius: 0px;
+        margin-top: 0rem;
+        font-size: 2rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        background-color: $primary;
+        color: $white;
+        &:hover{
+          background-color: $heading;
+        }
+      }
+  }
+  
+  .btn-all-mt {
+      margin-top: 2.5rem;
+  }
+
+  @media (max-width: 767px) {
+      .user-profile .profile-img-mt {
+        margin-bottom:3.0rem;
+      }
+  }
+  
+  
+  // end profile pages css
+
+
+
+//   edit profileee csssss
+/* input file style */
+
+.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+  + .js-labelFile {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+    .icon:before {
+      //font-awesome
+      content: "\f055";
+    }
+    &.has-file {
+      .icon:before {
+        //font-awesome
+        content: "\f058";
+        color: #999 ;
+      }
+    }
+  }
+} 
+
+.upload-file {
+    position: relative;
+    min-height: 130px !important;
+	
+	label{
+		margin-top: 30px !important;
+		span{
+			font-size: 16px;
+			font-weight: 400;
+			// font-family: $font-family-Open-Sans;
+		}
+	}
+	.icon{
+		position: absolute;
+		top: 30px!important;
+		left: 0px!important;
+		right: 0px!important;
+		text-align: center!important;
+		font-size: 30px;
+		color: #999999!important;
+    }
+   
+}
+.upload-file-2 {
+    position: relative;
+    min-height: 130px !important;
+	
+	label{
+		span{
+			font-size: 16px;
+			font-weight: 400;
+			// font-family: $font-family-Open-Sans;
+		}
+	}
+    i.fas.fa-image{
+        font-size: 30px;
+        color: $text-9;
+    }
+}
+
+.edit-profile-page {
+  margin-top: 0rem;
+  .custom-radio{
+    padding-left: 2.9rem;
+    margin-bottom: 0;
+    margin-right: 2rem !important;
+
+  }
+}
+
+
+.rtl{
+  .edit-profile-page {
+    
+    .custom-radio{
+      padding-left: 0rem;
+      padding-right: 2.9rem;
+      
+    }
+  }
+  .user-profile {
+    .profile-img-mt{
+      margin-left: 3.0rem;
+      margin-right: 0rem;
+    }
+  }
+  .user-profile {
+    .user-profile-detail-mt {
+      .addres{
+        display: flex;
+        align-items: baseline;
+        span{
+          padding-right: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+.gender-title{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $heading;
+  margin-bottom: 0.5rem;
+}

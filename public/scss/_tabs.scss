@@ -1,0 +1,434 @@
+// register 
+.register-tabs{
+  border-radius: 0rem;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  flex-wrap: nowrap;
+  @include small-767{
+    border-radius: 0rem;
+  }
+  @include m-575{
+    flex-direction: column;
+
+  }
+  .nav-item{
+      width: 50%;
+      // border-right: 1px solid $footer-bg;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        height: 2.8rem;
+        width: 0.5px;
+        background: #e3e3e3;
+        right: 0px;
+        top: 1.2rem;
+        display: none;
+        @include small-767{
+          display: none;
+        }
+      }
+      @include m-575{
+        width: 100%;
+        border-right: none;
+      }
+      &:last-child{
+        border-right: none;
+      }
+      .nav-link{
+          height: 5.5rem;
+          line-height: 2.1rem;
+          font-size: 2rem;
+          font-weight: 400;
+          color: $heading;
+          text-align: center;
+          text-transform: capitalize;
+          border-radius: 0;
+          padding: 0rem 1.5rem;
+         
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover,&.active{
+              background: $primary;
+              color: $white;
+          }
+      }
+  }
+ 
+}
+
+.register-tabs-s-p{
+  @include m-575{
+    flex-direction: unset;
+  }
+}
+
+
+.log-in-tabs-ha{
+  .width-tab-2-ctm{
+    width: 100%;
+    margin-top: 3rem;
+    @include small-767{
+      width: 100%;
+    }
+    .register-tabs{
+      border-radius: 0rem;
+      overflow: hidden;
+      width: 100%;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      flex-wrap: nowrap;
+      @include small-767{
+        border-radius: 0;
+      }
+      @include m-575{
+        flex-direction: column;
+    
+      }
+      .nav-item{
+          width: 50%;
+          max-width: 100%;
+          // border-right: 1px solid $footer-bg;
+          position: relative;
+          
+          &:after{
+
+            content: '';
+            position: absolute;
+            height: 2.8rem;
+            width: 0.5px;
+            background: #e3e3e3;
+            right: 0px;
+            top: 1.2rem;
+            @include small-767{
+              display: none;
+            }
+          }
+          @include m-575{
+            width: 100%;
+            border-right: none;
+          }
+          &:last-child{
+            border-right: none;
+          }
+          .nav-link{
+              height: 5rem;
+              line-height: 2.1rem;
+              font-size: 2rem;
+              font-weight: 400;
+              color: $heading;
+              text-align: center;
+              text-transform: capitalize;
+              border-bottom:0;
+              padding: 0rem 1.5rem ;
+              border-radius: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &:hover,&.active{
+                  background: $primary;
+                  color: $white;
+                  border-bottom:0;
+              }
+
+          }
+      }
+     
+    }
+    
+    .register-tabs-s-p{
+      @include m-575{
+        flex-direction: unset;
+      }
+    }
+  }
+  .register-tabs{
+    border-radius: 0rem;
+    overflow: hidden;
+    width: 86%;
+    margin: 0 auto;
+    box-shadow: none ;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    // margin-bottom: 4.3rem;
+    @include small-767{
+      border-radius: 0rem;
+    }
+    @include m-575{
+      flex-direction: row;
+  
+    }
+    .nav-item{
+        max-width: 18.5rem;
+        // border-right: 1px solid $footer-bg;
+        position: relative;
+        &:after{
+          display: none;
+          content: '';
+          position: absolute;
+          height: 2.8rem;
+          width: 0.5px;
+          background: #e3e3e3;
+          right: 0px;
+          top: 1.2rem;
+          @include small-767{
+            display: none;
+          }
+        }
+        @include m-575{
+          width: 100%;
+          border-right: none;
+        }
+        &:last-child{
+          border-right: none;
+        }
+        .nav-link{
+            height: 5rem;
+            line-height: 2.1rem;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: $text-p;
+            text-align: center;
+            text-transform: capitalize;
+            border-radius: 0;
+            padding: 0rem 1.5rem 0.9rem;
+            border-bottom: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover,&.active{
+                background: transparent;
+                color: $heading;
+                border-bottom: 3px solid $primary;
+            }
+        }
+    }
+   
+  }
+}
+// register 
+.categoty-list-tabs{
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    // border: 1px solid $footer-bg;
+    border-radius: 0px;
+    margin-bottom: 4.8rem;
+    // overflow: hidden;
+    // height: 6rem;
+    
+    @include m-425{
+      flex-wrap: wrap;
+      flex-direction: column;
+      border-radius: 0px;
+      height: unset;
+    }
+  }
+  .custom-tab{
+    &::after{
+      content: '';
+      position: absolute;
+      height: 6rem;
+      width: 0.5px;
+      border-right: 1px solid $footer-bg;
+      right: 0px;
+      display: none;
+      z-index: 9;
+      @include small-767{
+        border: none;
+      }
+    }
+  }
+}
+.categoty-list-tabs{
+  .custom-tab {
+    width: 28.4rem;
+    color: $heading;
+    min-width: 28.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    border: 1px solid $footer-bg;
+    // border-right: 0;
+    @include large-1440{
+      width: 35.6rem;
+    }
+    @include large-1199{
+      width: 29rem;
+    }
+    @include medium-991{
+      width: 21.5rem;
+      min-width: 21.5rem;
+    }
+    @include small-767{
+      width: 100%;
+    }
+    &:last-child{
+      border-right: 1px solid $footer-bg;
+
+    }
+    border-radius: 0px;
+    @include m-575{
+      width:100%;
+      border-bottom: none;
+      &:last-child{
+        border-bottom: 1px solid $footer-bg;
+
+      }
+    }
+    .nav-link{
+      color: $heading;
+      width: 100%;
+      height: 6.0rem;
+      font-weight: 400;
+      line-height: 5rem;
+      border-radius: 0px;
+      font-size: 2rem;
+     
+      &:hover,&.active{
+        background: $primary;
+        color: $white;
+        transition: ease-in 0.3s;
+        font-weight: 600;
+        
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      height: 6rem;
+      width: 1px;
+      // background: $cccccc;
+      border-right: 1px solid $footer-bg;
+      right: 0px;
+      z-index: 9;
+     
+    }
+    &:last-child{
+     &:after{
+       display: none;
+  
+     }
+    }
+    &:hover{
+      &:after{
+        background: $primary;
+        border-right: 1px solid $primary;
+        transition: ease-in 0.3s;
+      }
+    }
+    
+    
+  }
+}
+.order-page-tabs{
+  .nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 0px;
+    overflow: hidden;
+    height: 5.5rem;
+    @include m-425{
+      flex-wrap: wrap;
+      flex-direction: column;
+      border-radius: 0px;
+      height: unset;
+    }
+  }
+  .custom-tab{
+    .nav-link{
+      font-size: 1.6rem;
+      font-weight: 600;
+      
+    }
+    &::after{
+      @include m-425{
+        border: none;
+      }
+    }
+  }
+
+}
+
+
+.custom-tab {
+  width: 100%;
+  color: $heading;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  
+  &:last-child{
+    border-right: none;
+  }
+  border-radius: 0px;
+  @include m-425{
+    width:100%;
+    border-bottom: 1px solid $footer-bg;
+  }
+  .nav-link{
+    color: $heading;
+    width: 100%;
+    height: 6.0rem;
+    font-weight: 400;
+    line-height: 5rem;
+    border-radius: 0px;
+    font-size: 2rem;
+   
+    &:hover,&.active{
+      background: $primary;
+      color: $white;
+      transition: ease-in 0.3s;
+      
+    }
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    height: 2.8rem;
+    width: 0.5px;
+    // background: $cccccc;
+    border-right: 1px solid $cccccc;
+    right: 0px;
+    z-index: 9;
+   
+  }
+  &:last-child{
+   &:after{
+     display: none;
+
+   }
+  }
+  &:hover{
+    &:after{
+      background: $primary;
+      border-right: 1px solid $primary;
+    }
+  }
+  
+  
+}
+
+.register-us-home {
+  margin-bottom: 2.5rem;
+}
+
+
+.rtl {
+  .custom-tab:after {
+    content: '';
+    // position: absolute;
+    // height: 2.8rem;
+    // width: 0.5px;
+    // background: #cccccc;
+    
+    right: auto;
+    left: 0;
+  }
+}

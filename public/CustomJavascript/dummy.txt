@@ -1,0 +1,260 @@
+Pusher.logToConsole = true;
+var channel_name = "";
+
+var pusher = new Pusher('3a374406587fcdab3724', {
+    cluster: 'us3',
+    encrypted: true,
+    authEndpoint: '/pusher-auth', // just a helper method to create a link
+    auth: {
+        headers: {
+            'X-CSRF-Token':  $('meta[name="csrf-token"]').attr('content') // CSRF token
+        }
+    }
+});
+// //var pusher = new Pusher('3a374406587fcdab3724');
+// console.log(pusher);
+// // var channel = pusher.subscribe('notification-channel_'+userid+'_'+chat_id);
+// var channel = pusher.subscribe('private-channel_test');
+// // console.log('notification-channel_'+userid+'_'+chat_id);
+// channel.bind('my-event', function(data) {
+//     alert(JSON.stringify(data));
+// //  Snackbar.show({text: data.message});
+// //     var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+data.message+"</p></div></div></div></div>";
+// //     $("#test").append(message);
+// });
+
+// channel.bind('pusher:subscription_succeeded', function() {
+//     console.log("PVT channel");
+//   });
+
+//   channel.bind('message', function(data) {
+//     console.log(data);
+//   });
+
+// var pusher = new Pusher('APP_KEY');
+// var channel1 = pusher.subscribe('private-channel_test');
+// // var channel2 = pusher.subscribe('my-channel-2');
+// // var channel3 = pusher.subscribe('my-channel-3');
+// var eventName = 'my-event';
+// var callback = function(data) {
+//   // add comment into page
+//   alert("here");
+// };
+// // listen for 'new-comment' event on channel 1, 2 and 3
+// pusher.bind(eventName, callback);
+
+// alert(userid);
+var chat_id_custom = 0;
+
+ $(document).ready(function(){
+    $("#main-d").hide();
+    $("#sendMessage-d").on("submit", function(event){
+        //Code: Action (like ajax...)
+        // alert("here");
+        event.preventDefault();
+        let formdata = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1:8000/sendMessage",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            data: formdata,
+            success: function(result){
+                if(result.success == true){
+                    var message = "<div class='message me'><div class='text-main me'><div class='text-group me'><div class='text me'><p>"+result.data.message_body+"</p></div></div></div></div>";
+                    $("#test").append(message);
+                }
+          }});
+      })
+
+ });
+
+
+ function getChat(chat_id){
+
+    alert(chat_id);
+    // let formdata = new FormData;
+    // formdata.append('chat_id', chat_id);
+    //empty the div first
+    $("#main-d").show();
+    $("#test").empty();
+    $('#name_of_reciever').empty();
+    $("reciever_userid-d").val("");
+    $("sender_id-d").val("");
+    $("chat_id-d").val("");
+    var data = { 'chat_id':chat_id};
+    $.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:8000/get-chat-messages",
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        data: data,
+        success: function(result){
+            // console.log(result);
+            $.each(result.data.messages, function(k, v) {
+                /// do stuff
+                // console.log(v);
+                if(v.sender_user_id == userid){
+                    var message = "<div class='message me'><div class='text-main me'><div class='text-group me'><div class='text me'><p>"+v.message_body+"</p></div></div></div></div>";
+                }else{
+                    var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+v.message_body+"</p></div></div></div></div>";
+                }
+
+                if(v.reciever.id == userid){
+                    $('#name_of_reciever').html(v.sender.name);
+                }else{
+                    $('#name_of_reciever').html(v.reciever.name);
+                }
+                $("#test").append(message);
+                if(v.reciever.id == userid){
+                    $("#reciever_userid-d").prop('value', v.sender.id);
+                }else{
+                    $("#reciever_userid-d").prop('value', v.reciever.id);
+                }
+                //after appending set value to the send button of hidden inputs
+            });
+
+
+            console.log(result.data.chat.user_reciever_id);
+
+            $("#sender_id-d").val(userid);
+            $("#chat_id-d").val(chat_id);
+
+            console.log(userid + " " +chat_id);
+
+            // var pusher = new Pusher('3a374406587fcdab3724', {
+            //     cluster: 'us3',
+            //     encrypted: true,
+            //     authEndpoint: '/pusher-auth', // just a helper method to create a link
+            //     auth: {
+            //         headers: {
+            //             'X-CSRF-Token':  $('meta[name="csrf-token"]').attr('content') // CSRF token
+            //         }
+            //     }
+            // });
+            // var channel_name = 'private-channel_test_'+chat_id;
+            // pusher.unsubscribe(channel_name);
+            //var pusher = new Pusher('3a374406587fcdab3724');
+            console.log(pusher);
+            // var channel = pusher.subscribe('notification-channel_'+userid+'_'+chat_id);
+            var channel = pusher.subscribe('private-channel_test_'+chat_id);
+            // console.log('notification-channel_'+userid+'_'+chat_id);
+            channel.bind('my-event', function(data) {
+                // alert(JSON.stringify(data));
+              var t_chat_id = $('#chat_id-d').val();
+
+             console.log('data-id'+data.id);
+             console.log('char-id'+ t_chat_id);
+            //  alert(chat_id);
+             if(data.id == t_chat_id){
+                // Snackbar.show({text: data.message});
+                var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+data.message+"</p></div></div></div></div>";
+                $("#test").append(message);
+             }
+            });
+
+            channel.bind('pusher:subscription_succeeded', function() {
+                console.log("PVT channel");
+            });
+
+        //     var pusher = new Pusher('3a374406587fcdab3724', {
+        //         cluster: 'us3',
+        //         encrypted: true,
+        //         authEndpoint: '/pusher-auth', // just a helper method to create a link
+        //         auth: {
+        //             headers: {
+        //                 'X-CSRF-Token':  $('meta[name="csrf-token"]').attr('content') // CSRF token
+        //             }
+        //         }
+        //     });
+        //     //var pusher = new Pusher('3a374406587fcdab3724');
+        //     console.log(pusher);
+        //     // var channel = pusher.subscribe('notification-channel_'+userid+'_'+chat_id);
+        //     var channel = pusher.subscribe('private-channel_test');
+        //    // console.log('notification-channel_'+userid+'_'+chat_id);
+        //     channel.bind('my-event', function(data) {
+        //         alert(JSON.stringify(data));
+        //     //  Snackbar.show({text: data.message});
+        //     //     var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+data.message+"</p></div></div></div></div>";
+        //     //     $("#test").append(message);
+        //     });
+
+            // var channel = pusher.subscribe('private-notification-channel');
+            // console.log('notification-channel');
+            // channel.bind('my-event', function(data) {
+            //     alert(JSON.stringify(data));
+            //  Snackbar.show({text: data.message});
+            //     var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+data.message+"</p></div></div></div></div>";
+            //     $("#test").append(message);
+            // });
+            // chat_id_custom = chat_id;
+            //var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+data.message+"</p></div></div></div></div>";
+      }
+    });
+ }
+
+
+
+ function createChat(reciever_user_id){
+    alert(reciever_user_id);
+    $("#main-d").show();
+    $("#test").empty();
+    $('#name_of_reciever').empty();
+    $("reciever_userid-d").val("");
+    $("sender_id-d").val("");
+    $("chat_id-d").val("");
+    //var data = { 'chat_id':chat_id};
+
+    var data = {
+        "reciever_user_id" : reciever_user_id
+    }
+    $.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:8000/create-chat",
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        data: data,
+        success: function(result){
+            $.each(result.data.messages, function(k, v) {
+                /// do stuff
+                // console.log(v);
+                if(v.sender_user_id == userid){
+                    var message = "<div class='message me'><div class='text-main me'><div class='text-group me'><div class='text me'><p>"+v.message_body+"</p></div></div></div></div>";
+                }else{
+                    var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+v.message_body+"</p></div></div></div></div>";
+                }
+
+                if(v.reciever.id == userid){
+                    $('#name_of_reciever').html(v.sender.name);
+                }else{
+                    $('#name_of_reciever').html(v.reciever.name);
+                }
+                $("#test").append(message);
+                alert(reciever_user_id);
+
+
+
+                //after appending set value to the send button of hidden inputs
+            });
+            $("#reciever_userid-d").val(reciever_user_id);
+            if(result.data.messages){
+                $("#chat_id-d").val(result.data.chat.id);
+                 chat_id = result.data.chat.id;
+
+                console.log(userid + " " +chat_id);
+                // var channel = pusher.subscribe('notification-channel_'+userid+'_'+chat_id);
+                // channel.bind('my-event', function(data) {
+                // //    alert(JSON.stringify(data));
+                //  Snackbar.show({text: data.message});
+                //     var message = "<div class='message'><div class='text-main'><div class='text-group'><div class='text'><p>"+data.message+"</p></div></div></div></div>";
+                //     $("#test").append(message);
+                // });
+            }
+            console.log(reciever_user_id);
+
+            $("#sender_id-d").val(userid);
+
+        }
+    });
+ }
+
+
+  // Enable pusher logging - don't include this in production

@@ -1,0 +1,365 @@
+.link-stores .main-products-count-fav .inner-prod-cont {
+    @include m-425{
+        flex-direction: column;
+    }
+    
+}
+// slect drop sown
+.form-group-molat {
+    max-width: 47rem;
+    height: 5rem;
+    float: right;
+    
+    label {
+      float: left;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $text-p;
+      text-transform: capitalize;
+      margin: 0 2rem;
+      line-height: 1.2;
+      width: auto;
+      line-height: 5rem;
+    }
+    .banner-search-mt {
+      width: 25.4rem;
+      float: right;
+      min-height: 5rem;
+      padding: 0;
+      input,
+      .btn.focus,
+      .btn:focus {
+        outline: none;
+        box-shadow: none !important;
+      }
+      .bg-search-mt {
+        margin: 0;
+        background: none;
+        padding: 0;
+        border: 1px solid $footer-bg;
+        width: 100%;
+        min-height: 5rem;
+        border-radius: 0rem;
+        .check-area-mt {
+          border: none;
+  
+          .check {
+            width: 100%;
+            padding-left: 2.5rem;
+            height: 5rem;
+            line-height: 5rem;
+            font-size: 1.6rem;
+  
+            font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0;
+            cursor: pointer;
+            color: $text-9;
+          }
+          label {
+            line-height: 5.2rem;
+            transition: all 0.3s;
+            &:hover {
+              color: $white !important;
+              background: $primary !important;
+            }
+          }
+        }
+        .dropdown-menu {
+          //   margin-top: 0.7rem !important;
+          padding: 0;
+          border: none;  
+          border-radius: 0;
+          width: 100%;
+         box-shadow: 0px 1px 15px rgba(0, 0, 0,  0.15);
+          border-radius: 0.5rem !important;
+        }
+        .dropdown-toggle {
+          &::after {
+            background: url(../img/drop-icon.png) no-repeat right !important;
+            border-top: none !important;
+            width: 1.4rem !important;
+            height: 0.6rem !important;
+            float: right;
+            position: absolute;
+            right: 3rem;
+            top: 2.1rem;
+            @include large-1199{
+              width: 2.4rem !important;
+              height: 8px !important;
+              right: 3rem;
+              top: 1.8rem;
+            }
+          }
+        }
+      }
+      .drop-search-mt {
+        width: 100%;
+        float: left;
+        margin-bottom: 0px;
+        .dropdown {
+          button {
+            width: 100% !important;
+            background: none !important;
+            border: none !important;
+            float: right;
+            border-radius: 0rem !important;
+            text-align: left;
+            text-transform: capitalize;
+            padding: 0rem  2rem !important;
+            font-size: 1.6rem;
+            color: $heading;
+            line-height: 4.8rem !important;
+            font-weight: 600;
+            margin: 0;
+           
+            &::after{
+              display: inline-block;
+              // margin-left: 0.255em;
+              // vertical-align: 0.255em;
+              // border-right: 0 !important;
+              // border-top: 0 !important;
+              // border-left: 0 !important;
+              position: absolute;
+              right: 2.2rem !important;
+              content: '\f078 ';
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              margin: 0;
+              text-decoration: none;
+              font-size: 1.2rem;
+              top: 0;
+              color: $text-9;
+            }
+          }
+        }
+      }
+    }
+    .search-filter-dropdown {
+      .check-area-mt {
+        .check {
+          .checkmark {
+            border-radius: 0px !important;
+            top: 2.2rem;
+            right: 1rem;
+            left: auto;
+            border: none !important;
+            background: none;
+            border-radius: 0 !important;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 2.2rem;
+                right: 2.6rem;
+                display: block;
+                height: 0.4rem;
+                width: 1.8rem;
+                background: $secondary;
+                border: none;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                display: none;
+                // @include large-1199{
+                //   right: 28px;
+                // }
+              }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 2.5rem;
+              right: 3.8rem;
+              display: none;
+              width: 1rem;
+              height: 0.4rem;
+              border-radius: 0;
+              background: $secondary;
+              -webkit-transform: rotate(-91deg);
+              transform: rotate(-132deg);
+              // @include large-1199{
+              //   right: 36px;
+              // }
+              // @include m-425{
+              //   right: 34px;
+              // }
+              // @include m-375{
+              //   right: 33px;
+              //   top: 24px;
+              // }
+            }
+           
+          }
+        }
+      }
+    }
+    .search-filter-dropdown .check-area-mt .check input:checked ~ .checkmark::before {
+      display: block;
+    }
+    .search-filter-dropdown .check-area-mt .check input:checked ~ .checkmark::after {
+        display: block;
+      }
+  
+    .marg-b {
+      margin-top: -50px;
+      .card.contact-us {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  .rtl {
+    .form-group-molat {
+      label {
+        float: right;
+      }
+    }
+    .form-group-molat {
+      float: left;
+    }
+    .form-group-molat {
+      .banner-search-mt {
+        .drop-search-mt {
+          .dropdown button {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .form-group-molat {
+      .banner-search-mt {
+        .bg-search-mt {
+          .check-area-mt {
+            .check {
+              text-align: right;
+              padding-left: 0rem;
+              padding-right: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+    .form-group-molat {
+      .search-filter-dropdown {
+        .check-area-mt {
+          .check {
+            .checkmark {
+              &::before {
+                top: 2rem;
+                right: auto;
+                left: 4.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-group-molat {
+      .search-filter-dropdown {
+        .check-area-mt {
+          .check {
+            .checkmark {
+              &::after {
+                top: 2.2rem;
+                right: auto;
+                left: 3.8rem;
+                -webkit-transform: rotate(-91deg);
+                -ms-transform: rotate(-132deg);
+                transform: rotate(-132deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-group-molat {
+      .banner-search-mt {
+        .bg-search-mt {
+          .dropdown-toggle{
+            &::after{
+              right: auto !important;
+              left: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .form-group-molat .banner-search-mt {
+        margin-left: 0rem;
+    }
+  }
+.main-products-count-fav-product{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+    @include medium-991{
+        flex-direction: column;
+    }
+    .store-name-inner{
+        @include medium-991{
+            margin-bottom: 3rem;
+        }
+        .store-nike{
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: $heading;
+            
+            span{
+                color: $text-p;
+                font-weight: 400;
+                padding-left: 5px;
+            }
+        }
+    }
+    .inner-prod-cont{
+        margin-bottom: 0 !important;
+    }
+}
+.rtl{
+    .main-products-count-fav-product .store-name-inner .store-nike span{
+        padding-right: 5px;
+        padding-left: 0;
+    }
+    .main-products-count-fav-product .store-name-inner .store-nike{
+        display: flex;
+    }
+} 
+
+.rtl .main-products-count-fav .inner-prod-cont h4 {
+    
+    margin-right: 0rem;
+    margin-left: 3.9rem;
+}
+.rtl .main-products-count-fav .inner-prod-cont .custon-svg-btn {
+  
+  margin-right: 0rem;
+  margin-left: 0.7rem;
+}
+
+.stores-product-inner-link{
+    padding: 10rem 0;
+    .form-group-molat .banner-search-mt .bg-search-mt .check-area-mt label:hover {
+        
+        background: $primary !important;
+        color: $white !important;
+        .prvc{
+            color: $white !important;
+        }
+        
+    }
+  
+}
+
+  
+.form-group-molat .banner-search-mt .bg-search-mt .check-area-mt .check.active {
+    color: #333;
+}
+
+
+.products-align-r{
+  @include medium-991{
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

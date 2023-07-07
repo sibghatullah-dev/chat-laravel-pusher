@@ -1,0 +1,182 @@
+.package-main-section-1{
+  padding: 9.6rem 0 7.0rem;
+}
+.all-hading2 {
+  h4 {
+    font-size: 4.4rem !important;
+    color: $primary;
+    text-transform: capitalize;
+  }
+}
+
+.sec-heading-package-h{
+  .title{
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $black;
+    font-family: "segoeui";
+  }
+ 
+}
+.main-service {
+  // border: 1px solid $footer-bg;
+  position: relative;
+  border-radius: 0rem;
+  overflow: hidden;
+  @include medium-991{
+    width: 36rem;
+    margin: 0 auto;
+  }
+  @include m-575{
+    width: 260px;
+    margin: 0 auto;
+  }
+  @include m-375{
+    width: 200px;
+  }
+  @include m-320{
+    width: 200px;
+    margin: 0 auto;
+  }
+  @include m-285{
+    width: 248px;
+    margin: 0 auto;
+  }
+
+  .space-border{
+    border: 1px solid $footer-bg;
+  }
+  &.active-subscription {
+    .service-price {
+      background: $heading;
+      // .price{
+      //   color: $text-p;
+      // }
+      // .packg-time{
+      //   color: $text-p;
+      // }
+      // .sub-title{
+      //   color: $text-p;
+      // }
+    }
+  }
+
+  .service-price {
+    background: $heading;
+    padding: 2.8rem 1rem 2.3rem;
+    .sub-title {
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-family: "segoeui";
+      color: $white;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 3.6rem;
+      font-weight: 600;
+      color: $white;
+      margin-bottom: 0.56rem;
+      margin-bottom: 1.2rem;
+      line-height: 3.5rem;
+      margin-top: 1rem;
+    }
+
+    .packg-time {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $white;
+    }
+  }
+  
+  .service-detail {
+    // padding: 0rem 3.0rem 3.0rem;
+    
+    .package-text-box {
+      // margin: 4.3rem 1.6rem 3.8rem;
+      margin: 4.3rem 4.6rem 4rem;
+      height: 21rem;
+      max-height: 21rem;
+      overflow-y: auto;
+     
+      @include small-767{
+        height: 15.5rem;
+      }
+      @include m-375{
+        height: 17.5rem;
+      }
+      @include m-325{
+        height: 10.5rem;
+      }
+
+      @include m-285{
+        height: 13rem;
+      }
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 2.6rem;
+      color: $text-9;
+      
+      margin: 0 1rem;
+    }
+    .subcription-btn {
+      height: 5rem;
+      display: inline-block;
+      border: 0px !important;
+      width: 100%;
+      // margin-top: 2rem;
+      background: $primary;
+      color: $white;
+      font-size: 2rem;
+      font-weight: 400;
+      font-family: "segoeui" !important;
+      // border-bottom-right-radius: 1rem;
+      // border-bottom-left-radius: 1rem;
+      &:hover {
+        background: $heading;
+        color: $white;
+        transition: ease-in-out .4s;
+      }
+    }
+  }
+}
+
+.mr-37-ctm-radio{
+  margin-right: 3.7rem;
+}
+
+.rtl .mr-37-ctm-radio{
+  margin-right: 0rem;
+  margin-left: 3.7rem;
+}
+  /* width */
+  .package-text-box::-webkit-scrollbar {
+  width: 5px;
+}
+ /* Track */
+ .package-text-box::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 50rem;
+}
+
+/* Handle */
+.package-text-box::-webkit-scrollbar-thumb {
+  background: $primary; 
+  border-radius: 50rem;
+}
+
+/* Handle on hover */
+.package-text-box::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.mb-49-bottom{
+  margin-bottom: 4.9rem;
+}
+// .subscription-info {
+//   font-size: 14px;
+//   color: #222;
+//   padding-bottom: 30px !important;
+// }

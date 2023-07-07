@@ -1,0 +1,171 @@
+.next-banner{
+    background: url(../img/header-image.jpg) no-repeat center/cover;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    height: 50rem;
+}
+.bred-title{
+    font-weight: 700;
+    font-size: 5.4rem;
+    color: $white;
+    text-shadow: 3px 4px 0px rgba(255, 255, 255, 0.1);
+    margin-bottom: 2.2rem;
+    font-family: "segoeui" !important;
+    line-height: 7.2rem;
+    margin-top: 19.6rem;
+    @include large-1370{
+        margin-left: 6rem;
+      }
+      @include large-1290{
+        margin-left: 8rem;
+      }
+      @include large-1191 {
+        margin-left: 0rem;
+        margin-top: 24.6rem;
+      }
+    
+    // @include large-1199{
+    //     margin-top: 22rem;
+    // }
+    // @include medium-991{
+    //     margin-top: 22rem;
+    // }
+    // @include m-575{
+    //     margin-top: 24.3rem;
+    // }
+    // @include m-375{
+    //         margin-top: 26rem;
+    // }
+    // @include m-325{
+    //     margin-top: 27rem;
+    // }
+}
+
+.breadcrumb{
+    background: none;
+    padding: 0.75rem 0;
+    @include large-1370{
+        margin-left: 6rem;
+      }
+      @include large-1290{
+        margin-left: 8rem;
+      }
+      @include large-1191 {
+        margin-left: 0rem;
+      }
+    
+    .breadcrumb-item{
+        font-size: 2.2rem;
+        color: $white;
+        font-family: "segoeui" !important;
+        font-weight: 400;
+        // padding-left: 1.5rem;
+        padding-left: 0;
+        line-height: 0px;
+       a{
+        font-size: 2.2rem;
+        color: $white ;
+        font-weight: 400;
+        font-family: "segoeui" !important;
+        
+        
+        &:hover{
+            color: $primary;
+        }
+       }
+    }
+}
+.rtl .breadcrumb{
+    .breadcrumb-item{
+        padding-left: 0rem;
+        // padding-right: 1.5rem;
+    }
+    
+   
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    // font-family: FontAwesome;
+    // font-family: 'Font Awesome\ 5 Free';
+    font-family: "FontAwesome";
+    // content: "\f105";
+
+    content: "\f178";
+    // padding-right: 1.5rem;
+    padding: 1px 1.3rem;
+    // transform: translateY(-3px);
+    font-size: 2rem;
+    color: $white;
+    
+    
+}
+.rtl .breadcrumb-item + .breadcrumb-item::before {
+    transform: scaleX(-1)
+}
+
+    // .rtl {
+    //     .bred-title{
+    //         @include large-1199{
+    //             margin-top: 25rem;
+    //         }
+    //         @include medium-991{
+    //             margin-top: 25rem;
+    //         }
+    //         @include m-575{
+    //             margin-top: 26.3rem;
+    //         }
+    //         @include m-375{
+    //                 margin-top: 28.5rem;
+    //         }
+    //         @include m-325{
+    //             margin-top: 27rem;
+    //         }
+           
+    //     }
+    // }
+
+
+  .header-sec-mian{
+    .language-sec-inner-page{
+        height: 50rem;
+        @include large-1191{
+            height: 11rem;
+        }
+        @include small-767{
+            height: 9.6rem;
+        }
+    }
+  }  
+
+  .rtl{
+      .bred-title{
+        @include large-1370{
+            margin-left: 0rem;
+            margin-right: 6rem;
+          }
+          @include large-1290{
+            margin-right: 10rem;
+            margin-left: 0rem;
+          }
+          @include large-1191 {
+            margin-right: 0rem;
+            
+          }
+      }
+      .breadcrumb {
+        @include large-1370{
+            margin-left: 0rem;
+            margin-right: 6rem;
+        }
+        @include large-1290{
+            margin-right: 10rem;
+            margin-left: 0rem;
+          }
+          @include large-1191 {
+            margin-right: 0rem;
+            
+          }
+    }
+    
+    }

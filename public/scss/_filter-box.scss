@@ -1,0 +1,192 @@
+.left-side-box{
+    padding: 1.3rem 1.5rem 2.0rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 0px;
+}
+
+.filer-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: inline-block;
+    color: $heading;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    .fa-times{
+        margin-right: 2px;
+        font-size: 1.2rem;
+    }
+    &:hover{
+        color: $primary;
+        transition: ease-in-out .4s;
+    }
+}
+
+
+.ctm-input-stores{
+    box-shadow: none !important;
+    border: 1px solid $footer-bg !important;
+}
+.filter-search{
+    border-radius: 0rem;
+    border: 1px solid $footer-bg;
+    overflow: hidden;
+    .flt-srch{
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: $text-9;
+        outline: none;
+        border: none;
+        background: $white;
+        height: 5rem;
+        width: 100%;
+        padding: 1.6rem;
+        &::placeholder{
+            color: $text-9;
+        }
+    }
+    .flt-btn{
+        font-size: 1.6rem;
+        color: $white;
+        outline: none;
+        border: none;
+        background: $primary;
+        height: 5rem;
+        width: 5rem;
+        min-width: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease-in-out .4s;
+        &:hover{
+            background: $heading;
+            color: $white;
+            transition: ease-in-out .4s;
+        }
+        
+    }
+}
+
+.s-label{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $heading;
+    margin-bottom: 1.1rem;
+}
+.drop-down-ctm-molat {
+    background: transparent;
+    // border: 1px solid $border-color;
+    padding-right: 0;
+    width: 100%;
+    // border-radius: 50rem;
+    .search-fillter {
+        font-size: 1.6rem !important;
+        font-weight: 300;
+        color: $text-9;
+        border: 1px solid $footer-bg;
+        width: 100%;
+        padding: 0 2.0rem !important;
+        border-radius: 0rem;
+        width: 100%;
+        height: 5rem;
+        span{
+            text-decoration: underline;
+            
+        }
+        .fa-angle-down{
+            // color: #707070;
+            font-size: 1.6rem;
+            margin-top: 4px;
+            font-weight: 900;
+            
+        }
+        
+    }
+    .dropdown-menu.show{
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
+        border: none !important;
+        border-radius: 0rem;
+        .dropdown-item{
+            margin-bottom: 0 !important;
+            font-size: 1.6rem !important;
+            font-weight: 400;
+            color: $heading;
+            cursor: pointer;
+            &:hover{
+                color: $white;
+                transition: ease-in-out .4s;
+            }
+        }
+            
+    }
+
+}
+.drop-down-ctm-molat{
+    .dropdown-menu.show{
+        width: 100% !important;
+    }
+} 
+
+
+.padd-setts-filter{
+    padding-right: 7.5px !important;
+    @include medium-991{
+        padding-right: 15px !important;
+        margin-bottom: 22px;
+    }
+    @include m-575{
+        padding-right: 15px !important; 
+    }
+    
+    
+}
+.padd-setts-filter-1{
+    padding-left: 7.5px !important;
+    @include medium-991{
+        padding-left: 15px !important;
+    }
+    
+}
+
+
+
+.rtl{
+    .drop-down-ctm-molat {
+    
+        .search-fillter {
+           
+            .fa-angle-down{
+              
+            }
+            
+        }
+        .dropdown-menu.show{
+         
+            .dropdown-item{
+              text-align: right;
+            }
+                
+        }
+    
+    } 
+    .filer-title .fa-times {
+        margin-right: 0px;
+        margin-left: 2px;
+    }
+    .padd-setts-filter {
+        padding-right: 15px !important;
+        padding-left: 7.5px !important;
+        @include medium-991{
+            padding-left: 15px !important;
+            margin-bottom: 22px;
+        }
+    }
+    .padd-setts-filter-1 {
+        padding-left: 15px !important;
+        padding-right: 7.5px !important;
+        @include medium-991{
+            padding-right: 15px !important;
+            
+        }
+    }
+
+}

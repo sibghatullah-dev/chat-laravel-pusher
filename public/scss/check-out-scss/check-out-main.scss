@@ -1,0 +1,190 @@
+.check-out-form{
+    border-radius: 0rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+    padding: 2.4rem 3rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.check-out-form-h{
+    font-weight: 600;
+    font-size: 2rem;
+    color: $heading;
+    padding-bottom: 1.7rem;
+    border-bottom: 1px solid $footer-bg;
+    margin-bottom: 1.8rem;
+}
+.check-out-form-h-secd{
+    font-weight: 600;
+    font-size: 2rem;
+    color: $heading;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid $footer-bg;
+    margin-bottom: 2.5rem;
+}
+// .width-save{
+//     width: 14rem !important;
+//     height: 4rem !important;
+//     min-width: 14rem !important;
+//     font-size: 1.4rem !important;
+// }
+.manage-branch-btn-check-out{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2.5rem;
+    justify-content: flex-end;
+    @include medium-991{
+        margin-top: 0;
+    }
+}
+.manage-branch-btn-check-out-card{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2.5rem !important;
+    justify-content: flex-end;
+   
+}
+.row-aliment{
+    padding: 0 15px;
+    // @include small-767{
+    //     padding: 0;
+    // }
+    @include m-575{
+        padding: 0 15px;
+    }
+    
+}
+
+.credit-d{
+    background-color: #F9F9F9;
+    padding: 7rem 3rem 2rem 3rem;
+    border-radius: 1rem;
+    height: 20rem;
+    @include medium-991{
+        height: 23rem;
+    }
+    // @include small-767{
+    //     height: 20.8rem;
+    // }
+    .input-style{
+        label{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $text-p;
+            margin-bottom: -0.4rem;
+        }
+        .ctm-input-1 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: $text-9;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+            padding: 0;
+            height: 2.5rem;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .ctm-input-2 {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: $text-9;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+            padding: 0;
+            height: 2.5rem;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+    }
+}
+.col-card-setts{
+    padding-left: 0 !important;
+    
+}
+
+.input-style-check-out{
+    margin-right: 2.4rem;
+}
+
+.check-out-form-1{
+    border-radius: 0rem;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+    padding: 2.4rem 3rem 3rem;
+    margin-bottom: 3rem;
+    @include small-767{
+        margin-top: 3rem;
+    }
+    
+}
+
+.margin-check-reponsive{
+    @include medium-991{
+        margin-bottom: 3rem;
+    }
+    
+}
+.back-side{
+    background-color: $footer-bg;
+    width: 100%;
+    height: 5rem;
+}
+
+.card-back{
+    background-color: #F9F9F9;
+    padding-top: 2rem;
+    border-radius: 1rem;
+    height: 20rem;
+    @include medium-991{
+        height: 23rem;
+    }
+    @include small-767{
+        margin-top: 3rem;
+    }
+    // @include small-767{
+    //     height: 20.8rem;
+    // }
+    .credit-d-b{
+        background-color: #F9F9F9;
+        padding: 0.7rem 3rem 2rem 3rem;
+        border-radius: 1rem;
+        
+        .input-style{
+            width: 7.8rem;
+            label{
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: $text-p;
+                margin-bottom: -0.4rem;
+            }
+            .ctm-input-1 {
+                font-size: 2rem;
+                font-weight: 300;
+                color: $text-9;
+                background: transparent;
+                box-shadow: none;
+                border-radius: 0;
+                border-bottom: 1px solid #ddd;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                padding: 0;
+                height: 2.5rem;
+            }
+        }
+    }
+}
+
+
+.rtl{
+    .input-style-check-out {
+        margin-right: 0;
+        margin-left: 2.4rem;
+    }
+}

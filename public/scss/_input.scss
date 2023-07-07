@@ -1,0 +1,681 @@
+// custom Radio
+.addres-list{
+    .custom-radio{
+        .checkmark {
+            top: 05px;
+        }
+    }
+}
+.custom-radio{
+
+    &.payment-type-title{
+        font-size: 16px;
+        font-weight: 500;
+        color: $heading;
+        margin-bottom: 24px;
+    }
+    &.payment-card-type{
+        font-size: 07px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $heading;
+    }
+   
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 05px;
+        cursor: pointer;
+       
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        font-size: 14px;
+        font-weight: 400;
+        color: $text-p;
+        line-height: 19px;
+     
+      
+      /* Hide the browser's default radio button */
+       input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        display: none;
+      }
+      
+      /* Create a custom radio button */
+      .checkmark {
+        position: absolute;
+        top: -02px;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        background-color: $white;
+        border-radius: 50%;
+        border: 1px solid $cccccc;
+      }
+      
+      /* On mouse-over, add a grey background color */
+    //   &:hover input ~ .checkmark {
+    //     background-color: #ccc;
+    //   }
+      
+      /* When the radio button is checked, add a blue background */
+      input:checked ~ .checkmark {
+        border: 1px solid $primary;
+      }
+      
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the indicator (dot/circle) when checked */
+       input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+      /* Style the indicator (dot/circle) */
+       .checkmark:after {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% , -50%);
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: $primary;
+          @include m-320{
+            transform: translate(-57% , -36%);
+          }
+      }
+}
+
+
+
+.input-style {
+  label {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $heading;
+      margin-bottom: 1rem;
+      font-family: "segoeui" !important;
+      span{
+          font-size: 1.4rem;
+          line-height: 2rem;
+          position: relative; 
+          top: -0.3rem;
+          padding: 0 5px;
+      }
+  }
+
+  .ctm-input {
+      font-size: 1.6rem;
+      font-family: "segoeui" !important;
+      font-weight: 300;
+      color: $text-9;
+      height: 5rem;
+      
+      width: 100%;
+      outline: none;
+      border: none;
+      // background-color: $white;
+      padding: 2px 2rem;
+      display: inline-block;
+      border: 1px solid $footer-bg;
+      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      // -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important; 
+      // -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important;
+      -webkit-appearance: none !important;
+      @include m-425{
+        padding: 5px 2rem 2px;
+      }
+      &::placeholder{
+          // font-size: 1rem;
+          font-weight: 300;
+          color: $text-9;
+      }
+  }
+  .ctm-textarea{
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: $text-9;
+      height: 15.0rem;
+      border-radius: 0rem;
+      width: 100%;
+      outline: none;
+      border: none;
+      // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      border: 1px solid $footer-bg;
+      font-family: "segoeui" !important;
+      padding: 1.5rem 2rem;
+
+      &::placeholder{
+          // font-size: 1rem;
+          font-weight: 300;
+          color: $text-9;
+      }
+  }
+
+  .type-pass {
+      position: relative;
+
+      .ctm-input {
+          padding: 2px 4rem 2px 2rem;
+      }
+
+      .icon-eye {
+          position: absolute;
+          top: -3px;
+          right: 0px;
+          height: 5.5rem;
+          width: 5.5rem;
+          cursor: pointer;
+          color: $text-9;
+          text-align: center;
+          font-size: 1.4rem;
+          @include large-1199{
+            top: -1px;
+          }
+          img{
+            @include large-1199{
+              width: 18px;
+            }
+            @include m-575{
+              width: 16px;
+            }
+          }
+          
+      }
+  }
+}
+// rtl
+.rtl .input-style {
+  .type-pass {
+      .ctm-input {
+          padding: 2px 2rem 2px 4rem;
+      }
+      .icon-eye {
+          right: auto;
+          left: 0px;
+      }
+  }
+}
+// rtl
+
+
+// custom check box
+.custom-check {
+  display: block;
+  position: relative;
+  padding-top: 1px;
+  padding-left: 3rem;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-family: "segoeui";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $text-9;
+
+
+  /* Hide the browser's default checkbox */
+  input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      border-radius: 0px !important;
+      height: 2.2rem;
+      width: 2.2rem;
+      background-color: $white;
+      border:1px solid $cccccc;
+      @include large-1370{
+        top: 1px;
+      }
+  }
+
+  /* On mouse-over, add a grey background color */
+  // &:hover input~.checkmark {
+  //     background-color: #ccc;
+  // }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked~.checkmark {
+      background-color: $primary;
+      border:1px solid $primary;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+
+  /* Show the checkmark when checked */
+  input:checked~.checkmark:after {
+      display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+      left: 0.7rem;
+      top: 0.3rem;
+      width: 0.7rem;
+      height: 1.2rem;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      @include m-575{
+        left: 0.6rem;
+        top: 0.2rem;
+        border-width: 0 2px 2px 0;
+      }
+  }
+  
+}
+
+
+// .rtl
+.rtl{
+  .custom-check {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      /* Create a custom checkbox */
+      .checkmark {
+          left: auto;
+          right: 0;
+          top: 0.4rem; //rtl after
+          @include m-430{
+            top: 0.2rem; 
+          }
+          @include m-380{
+            top: 0.3rem; 
+          }
+      }
+      /* Style the checkmark/indicator */
+      .checkmark:after {
+          left: auto;
+          right: 0.6rem;
+      }
+  }
+  .custom-radio{
+    padding-left: 0rem;
+    padding-right: 3rem;
+    .checkmark{
+      right: 0;
+      left: auto;
+    }
+
+  } 
+}
+.rtl{
+  .custom-radio.custom-radio-center-ha.mr-3{
+    margin-right: 1rem !important;
+    // margin-left: 2rem !important;
+  }
+}
+// .rtl
+// custom check box
+
+/********************************************/
+// custom Radio
+.custom-radio{
+ 
+      display: block;
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      font-size: 2.2rem;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: $heading;
+      line-height: 1.6rem;
+      margin-right: 2rem !important;
+   
+    
+    /* Hide the browser's default radio button */
+     input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: -0.2rem;
+      left: 0;
+      height: 1.8rem;
+      width: 1.8rem;
+      background-color: $white;
+      border-radius: 50%;
+      border: 1px solid $cccccc;
+      
+      @include large-1199{
+        height: 12px;
+        width: 12px;
+        top: 0rem;
+      }
+      @include medium-991{
+       
+        top: 0rem;
+      }
+      @include m-425{
+        height: 12px;
+        width: 12px;
+        top: -0.3rem;
+      }
+      @include m-375{
+        top: -0.4rem;
+      }
+      @include m-320{
+        top: -0.5rem;
+      }
+    }
+    
+    /* On mouse-over, add a grey background color */
+  //   &:hover input ~ .checkmark {
+  //     background-color: #ccc;
+  //   }
+    
+    /* When the radio button is checked, add a blue background */
+    input:checked ~ .checkmark {
+      border: 0.5rem solid $heading;
+    }
+    
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the indicator (dot/circle) when checked */
+     input:checked ~ .checkmark:after {
+      // display: block;
+      
+    }
+    
+    /* Style the indicator (dot/circle) */
+     .checkmark:after {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 0.8rem;
+        height: 0.8rem;
+        display: none !important;
+        border-radius: 50%;
+        background: $white;
+        @include large-1199{
+          width: 6px;
+          height: 6px;
+        }
+        @include m-425{
+          width: 1rem;
+          height: 1rem;
+        }
+        // @include m-320{
+        //   transform: translate(-57% , -36%);
+        // }
+    }
+}
+.custom-radio-center-ha{
+  // .checkmark:after{
+  //   @include m-320{
+  //     transform: translate(-66% , -60%);
+  //   }
+  // }
+}
+.rtl{
+  .custom-radio-center-ha{
+    .checkmark:after{
+      @include m-320{
+        transform: translate(-50% , -50%);
+      }
+    }
+  }
+}
+
+// pass-title
+.pass-title{
+  font-size: 2rem;
+  font-weight: 600;
+  color: $heading;
+  line-height: 1.8rem;
+  margin-bottom: 1.9rem;
+}
+// pass-title
+
+
+// size radio
+.size-radio{
+  display: block;
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0rem;
+  margin-right: 1rem;
+  &:last-child{
+      margin-right: 0rem;
+  }
+
+/* Hide the browser's default radio button */
+ input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* When the radio button is checked, add a blue background */
+input:checked ~ .checkmark {
+  background: $secondary;
+  color: $white;
+  border: 1px solid $secondary;
+}
+}
+.rtl{
+  .size-radio{
+      margin-right: 0rem;
+      margin-left: 1rem;
+      &:last-child{
+          margin-right: 0rem;
+          margin-left: 1rem;
+      }      
+  }
+}
+// size radio
+
+
+
+// color radio
+.color-radio{
+  display: block;
+  position: relative;
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0rem;
+  margin-right: 1rem;
+  &:last-child{
+      margin-right: 0rem;
+  }
+
+/* Hide the browser's default radio button */
+ input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  img{
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+  }
+}
+/* When the radio button is checked, add a blue background */
+input:checked ~ .checkmark {
+  background: $secondary;
+  color: $white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkmark:after {
+  // left: 1.5rem;
+  // top: 0.5rem;
+  // width: 0.7em;
+  // height: 2.6rem;
+  // border: solid $white;
+  // left: 1.6rem;
+  //   top: 0.8rem;
+  //   width: 0.6em;
+  //   height: 2.3rem;
+  left: 1.6rem;
+  top: 0.6rem;
+  width: 0.6em;
+  height: 2.3rem;
+  border: solid #fff;
+  border-width: 0 3.5px 3.5px 0;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+}
+
+.rtl{
+  .color-radio{
+      margin-right: 0rem;
+      margin-left: 1rem;
+      &:last-child{
+          margin-right: 0rem;
+          margin-left: 1rem;
+      }      
+  }
+}
+// color radio
+
+.check-detail-ctm.mt-top-margin{
+  margin-top: 2rem;
+  .custom-check {
+    padding-top: 1px;
+    font-weight: 400;
+    color: $text-9;
+  }
+}
+.check-detail-ctm.mt-top-margin {
+  .custom-radio-add-pro{
+    @include large-1199{
+      padding-top: 3px;
+    }
+    @include m-375{
+      padding-top: 2px;
+    }
+    .checkmark:after{
+      @include m-375{
+        left: 0.6rem;
+      }
+    }
+  }
+
+}
+.pass-title-pass{
+  font-size: 2rem !important;
+}
+.for-sp-us-gen {
+  padding-top: 0.6rem;
+}
+.for-space-us-check {
+  margin-bottom: 2.1rem;
+  .custom-check{
+    padding-top: 1px;
+    
+  }
+  .prvc{
+    font-weight: 300;
+    padding-top: 0rem;
+    
+  }
+}
+
+.custom-check-r .checkmark{
+  @include large-1370{
+    top: 1px;
+  }
+ 
+}

@@ -1,0 +1,534 @@
+.shop-btn{
+    @include font-20;
+    @include font-weight(400);
+    @include white(color,$white);
+    padding: 0.9rem 3.3rem;
+    border: 1px solid $white;
+    background: rgba(1, 116, 178, 0.50);
+    display: inline-block;
+    transition: all 0.4s ;
+    &:hover{
+        @include secondary-bg;
+        @include white(color,$white);
+    }
+}
+.border-white{
+    border: 0.2rem solid $white !important;
+}
+.btn-primary{
+    background-color: $primary !important;
+    border: 0;
+    border-radius: 0 ;
+    width: 16rem ;
+    min-width: 16rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem !important;
+    height: 5rem;
+    color: $white !important;
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+font-weight:400;
+    @include m-575{
+        padding-bottom: 1px;
+    }
+    &:hover{
+        transition: ease-in-out .4s;
+        background-color: $black !important;
+
+    }
+    &:focus{
+        outline: none !important;
+        box-shadow: none !important;
+
+    }
+
+}
+
+.serch-btn-mt{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    border-radius: 0rem;
+    display: flex;
+    // line-height: 2.6rem;
+    // padding: 1.3rem 1.5rem 1.1rem 1.5rem;
+    padding: 1rem 1rem 1rem;
+    min-width: 15.5rem;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+    width: 15.5rem;
+    border: none;
+    height: 5rem;
+    text-align: center;
+    outline: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    &:hover{
+        background: $heading;
+        color: $white;
+    }
+    // &:focus{
+    //     color: $white;
+    //     box-shadow: none;
+    // }
+    // @include m-575{
+    //     padding: 1.7rem 1.5rem 1.5rem 1.5rem;
+    // }
+}
+.serch-btn-mt-sup{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    border-radius: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 0rem 1rem 0rem 1rem;
+    min-width: 15rem;
+    transition: all 0.4s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 4rem;
+    &:hover{
+        background: $secondary;
+        color: $white;
+    }
+    // &:focus{
+    //     color: $white;
+    //     box-shadow: none;
+    // }
+    // @include m-575{
+    //     padding: 1.7rem 1.5rem 1.5rem 1.5rem;
+    // }
+}
+.secondary-sup{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $primary;
+    background: $secondary;
+    border-radius: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem 1.5rem 1.1rem 1.5rem;
+    min-width: 13rem;
+    transition: all 0.4s;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 4rem;
+    &:hover{
+        background: $primary;
+        color: $white;
+    }
+    &:focus{
+        color: $primary;
+        box-shadow: none;
+    }
+    @include m-575{
+        padding: 1.7rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+.btn{
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
+button{
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
+.manage-branch-btn-check-out .profile-btn{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $white;
+    background: $heading;
+    border-radius: 0rem;
+    padding: 1rem;
+    min-width: 15rem;
+    width: 15rem;
+    transition: all 0.4s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    height: 5rem;
+    cursor: pointer;
+    border: none;
+    margin-right: 3rem;
+    &:hover{
+        background: $primary;
+        color: $white;
+    }
+}
+.rtl {
+    .manage-branch-btn-check-out .profile-btn{
+        margin-right: 0;
+        margin-left: 3rem;
+    }
+}
+.manage-branch-btn-check-out .profile-btn-1{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    border-radius: 0rem;
+    padding: 1rem;
+    min-width: 15rem;
+    width: 15rem;
+    transition: all 0.4s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    height: 5rem;
+    cursor: pointer;
+    border: none;
+    &:hover{
+        background: $heading;
+        color: $white;
+    }
+}
+.btn-confirm{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    border-radius: 0rem;
+    padding: 1rem;
+    min-width: 10rem;
+    width: 10rem;
+    transition: all 0.4s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    height: 3.5rem;
+    cursor: pointer;
+    border: none;
+    &:hover{
+        background: $heading;
+        color: $white;
+    }
+}
+.btn-apply{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    border-radius: 0rem;
+    padding: 0 1rem;
+    min-width: 10rem;
+    width: 10rem;
+    transition: all 0.4s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    height: 4rem;
+    cursor: pointer;
+    border: none;
+    &:hover{
+        background: $heading;
+        color: $white;
+    }
+}
+.checkout-btn{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    border-radius: 0rem;
+    padding: 1rem;
+    min-width: 15.0rem;
+    width: 100%;
+    transition: all 0.4s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 2rem;
+    outline: none;
+    cursor: pointer;
+    height: 5rem;
+    @include medium-991{
+        font-size: 1.6rem;
+    }
+    @include small-767{
+        font-size: 2rem;
+    }
+    &:hover{
+        background: $heading;
+        color: $white;
+    }
+}
+
+
+
+// arrows-btn brand slider 
+.slider-arrows{
+    direction: ltr;
+    .icon-Icon-ionic-ios-arrow-down {
+        font-size: 1.4rem;
+    }
+    .icon-Icon-ionic-ios-arrow-down-1{
+        font-size: 1.4rem;
+
+    }
+}
+.latest-arrow-us{
+    .arrow-mt{
+        margin-left: 0.3rem;
+    }
+
+}
+.arrow-mt{
+    font-size: 1rem;
+    width: 4.1rem;
+    height: 4.1rem;
+    border-radius: 5px;
+    background: $white;
+    border: 1px solid $primary;
+    color: $primary;
+    transition: all 0.4s;
+    &:hover{
+        background: $primary;
+        color: $white;
+    }
+    &.next{
+        margin-left: 3px;
+    }
+}
+// arrows-btn brand slider 
+// log in page putton
+
+.login-p {
+    height: 5rem;
+    // line-height: 5.5rem;
+    border-radius: 0rem;
+    background: $primary;
+    
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: $white;
+    transition: ease-in-out .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background: $heading;
+        transition: ease-in-out .4s;
+        color: $white;
+    }
+}
+.btn-address{
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    border-bottom-right-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-radius: 0;
+    color: $white;
+    font-size: 2.2rem;
+    transition: ease-in-out .4s;
+    .fa-map-marker-alt{
+        font-size: 2rem !important;
+        color: $white;
+        transition: ease-in-out .4s;
+    }
+    &:hover{
+        background-color: $heading;
+        color: $white;
+        transition: ease-in-out .4s;
+        @include m-575{
+            background-color: $secondary;
+            color: $white;
+        }
+        .fa-map-marker-alt{
+            
+            color: $white;
+            @include m-575{
+                color: $white;
+            }
+        }
+    }
+}
+.rtl {
+    .btn-address {
+        
+        // border-bottom-right-radius: 0rem;
+        // border-top-right-radius: 0rem;
+        // border-bottom-left-radius: 50rem;
+        // border-top-left-radius: 50rem;
+        
+    }
+}
+.login-s {
+    height: 5rem;
+    // line-height: 5.5rem;
+    display: inline-block;
+    border-radius: 0rem;
+    background: $heading;
+    color: $white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+
+    &:hover {
+        background: $primary;
+        color: $white;
+        
+    }
+}
+
+.socl-button{
+    height: 5rem;
+    line-height: 5.5rem;
+    display: inline-block;
+    line-height: 5rem;
+    background: $heading;
+    color: $white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+// haseeb btns
+.login-p-order-detail{
+    height: 5rem;
+    // line-height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0rem;
+    background: $heading;
+    color: $white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    width: 100%;
+    
+    width: 15.0rem;
+    min-width: 15rem;
+    @include m-320{
+        width: 100%;
+        min-width: 100%;
+    }
+    &:hover {
+        background: $primary;
+        color: $white;
+    }
+}
+.login-s-order-detail{
+    height: 5rem;
+    // line-height: 5.5rem;
+   
+    border-radius: 0rem;
+    background: $primary;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15.0rem;
+    min-width: 15rem;
+    margin-left: 1rem;
+    @include m-320{
+        width: 100%;
+        min-width: 100%;
+    }
+    &:hover {
+        background: $heading;
+        color: $white;
+    }
+}
+.rtl .login-s-order-detail{
+    margin-right: 1rem;
+    margin-left: 0;
+}
+// end haseeb btns
+
+.add-pro-btn-save{
+    margin-top: 0rem;
+    .serch-btn-mt {
+        min-width: 15.0rem !important;
+        width: 15rem !important;
+    }
+}
+
+
+.common-btn {
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 0px;
+    background: $primary;
+    color: $white;
+    padding: 0rem 3.3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    display: inline-block;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: all .4s;
+
+    &:hover {
+        background: $heading;
+        color: $white;
+        transition: ease-in-out .4s;
+    }
+
+}
+.shadow-none{box-shadow: none;}

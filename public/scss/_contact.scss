@@ -1,0 +1,515 @@
+.main-haeding-contact{
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: $secondary-heading-colr;
+  margin-bottom: 4.4rem;
+  line-height: 4.6rem;
+  font-family: "segoeui" !important;
+}
+.contact-addres-box{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    padding: 0rem;
+    margin-bottom: 4.8rem;
+    border-radius: 5px;
+    .adrs-des {
+      height: 8.1rem;
+  }
+}
+
+.contact-us-main-section{
+  padding: 8.9rem 0 10rem;
+}
+.address-1 {
+    width: 33.3%;
+    position: relative;
+    padding: 4.8rem 7rem 1.0rem !important;
+    height: 25.8rem;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 3.6rem;
+      right: 0rem;
+      height: 18.6rem;
+      width: 1px;
+      background: #eee;
+     
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    @include small-767{
+        border: none !important;
+        border-bottom: 1px solid $footer-bg !important;
+        margin-bottom: 0px !important;
+        height: unset;
+        padding: 5rem 3rem !important;
+    }
+    &:last-child{
+        border: none !important;
+    }
+    .img-box{
+        width: 5.8rem;
+        height: 5rem;
+        margin-bottom: 1.3rem;
+        @include medium-991{
+          height: unset;
+        }
+    }
+}
+.adrs-des{
+    .title{
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $heading;
+        margin-bottom: 5px;
+    }
+    .ad-info{
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: $text-p;
+        line-height: 3.2rem;
+    }
+    .hover-us{
+      &:hover{
+        color: $primary;
+      }
+    }
+}
+
+
+
+.contact-us-mt-mra{
+    .help-one-mt{
+      h4{
+        font-weight: 600 !important;
+      }
+    }
+  }
+  .check-area-mt input {
+    display: none !important;
+  }
+  
+  
+  
+  .contc{
+    width: 100%;
+  }
+  .drop-bottom{
+    .dropdown-toggle::after {
+      display: inline-block;
+      margin-left: 0.255em;
+      vertical-align: 0.255em;
+      border-right: 0 !important;
+      border-top: 0 !important;
+      border-left: 0 !important;
+      position: absolute;
+      right: 0 !important;
+      content: '\f078 ';
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      margin: -1px 18px 0px 10px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: $text-9;
+    }
+    
+    .dropdown-toggle::before {
+      position: absolute;
+      content: "";
+      height: 4.6rem;
+      top: 0;
+      width: 4.5rem;
+      right: 0;
+      line-height: 3.4rem;
+      border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+    
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+  .contact-us-mt-mra{
+    margin: 7.3rem 0 ;
+  }
+    .sent-massage-mt{
+      width: 100%;
+      float: left;
+      h6{
+        width: 100%;
+        float: left;
+        font-size: 1.8rem;
+        color: rgb(153, 153, 153);
+        line-height: 1.333;
+        text-align: left;
+       
+        margin-bottom: 3.2rem;
+      }
+      .form{
+        width: 100%;
+        float: left;
+      }
+    }
+  
+  .b-r{
+    border-right: 1px solid #eeeeee;
+    @include medium-991{
+      border: none;
+    }
+  }
+  .b-l{
+     border-left: 1px solid #eeeeee;
+     @include medium-991{
+      border: none;
+    }
+  }
+  
+
+    .help-one-mt{
+        float: left;
+        border-radius: 0px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 1px 24px 0px rgba(53, 34, 93, 0.08);
+        width: 100%;
+        text-align: center;
+        padding: 405rem 2.1px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 6.0rem;
+        margin-top: 1.5rem;
+        img{
+            margin-bottom: 2.0rem;
+        }
+        h4{
+          width: 100%;
+            text-transform: capitalize !important;
+            margin-bottom: 1.0rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+           
+            color: $heading;
+        }
+        p{
+          width: 100%;
+            margin-bottom: 0px;
+            line-height: 3.0rem;
+            font-size: 1.4rem;
+           
+            font-weight: 500;
+            color: $text-p;
+        }
+    }
+  
+  
+ 
+ 
+  
+  .style-icon-mra {
+    z-index: 2;
+    i{
+      color: rgb(153, 153, 153);
+    }
+  }
+  .style-icon-mra select {
+    padding: 0px 55px 0px 15px;
+  }
+  
+  .heading-all-mt {
+    width: 100%;
+    margin-bottom: 1.9rem !important;
+    font-size: 2.4rem;
+    font-family: "segoeui" !important;
+    color: $heading;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    
+  }
+  .fomr-des{
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $text-p;
+    margin-bottom: 1.8rem;
+  }
+  
+
+  
+ 
+  
+  @media (max-width: 991px) {
+    .contact-us-mt-mra{
+      margin:5.0rem 0 !important;
+  }
+    .help-one-mt{
+      display: inherit !important;
+      padding: 1.5rem !important;
+      margin-top: 2.5rem !important;
+    }
+    
+  }
+  
+ 
+  
+
+  
+  .contact-map-ah{
+    border: 1px solid #dddddd;
+    height: 63.1rem;
+    margin-top: -4.3rem;
+    background-color: #dddddd;
+    width: 55.5rem;
+    @include medium-991{
+      width: 100%;
+    }
+    @include small-767{
+      width: 100%;
+      margin-top: 0rem;
+    }
+    @include large-1440{
+      // height: 56.7rem;
+      // height: 56.5rem;
+      // border: 1rem solid $secondary;
+    }
+   
+     
+  }
+  
+  .help-one-mt.fixed-height{
+    min-height: 259px !important;
+  }
+  .check.rem-margin-bottom{
+    margin-bottom: 0 !important;
+  }
+.margin-contact-us-m{
+  margin-bottom: 7.6rem;
+  @include medium-991{
+    margin-bottom: 4.6rem;
+  }
+}
+//  new-address section scss
+.ancher-link-contact{
+  &:hover{
+    .contact-info-box{
+      .img-box{
+        background-color:  $secondary-heading-colr;
+        i{
+          color: $white;
+          transition: ease-in-out .4s;
+        }
+        svg{
+          
+          path{
+            fill: $white;
+            transition: ease-in-out .4s;
+          }
+        }
+      }
+    }
+  }
+  .contact-info-box{
+    align-items: center;
+    @include medium-991{
+      margin-bottom: 3rem;
+    }
+    .img-box{
+      width: 6rem;
+      min-width: 6rem;
+      height: 6rem;
+      border: 1px solid $secondary-heading-colr;
+      i{
+        font-size: 3rem;
+        
+      }
+      svg{
+        @include large-1440{
+          width: 3rem;
+        }
+      }
+      &:hover{
+        background-color: $secondary-heading-colr;
+        i{
+          color: $white;
+          transition: ease-in-out .4s;
+        }
+        svg{
+          
+          path{
+            fill: $white;
+            transition: ease-in-out .4s;
+          }
+        }
+      }
+      
+    }
+   
+    .call-us-h{
+      margin-left: 2.1rem;
+      .call-us-c{
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $secondary-heading-colr;
+        margin-bottom: 0.4rem;
+      }
+      .number-phone{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $secondary-heading-colr;
+      }
+    }
+  }
+}
+.mb-23-bottom{
+  margin-bottom: 2.3rem;
+}
+.mb-25-bottom{
+  margin-bottom: 2.5rem;
+}
+  // contact us dropdown  category
+.sent-massage-mt{
+    .custom-btn {
+        text-align: left;
+        border: transparent;
+        background: transparent;
+        width: 100%;
+        display: block;
+        padding: 1rem;
+        max-width: 100% !important;
+        font-size: 1.6rem;
+        font-weight:300 !important;
+        
+        overflow: hidden;
+        min-height: 5rem;
+        display: flex;
+        color: $text-9;
+        padding-left: 2rem;
+        border: 1px solid $footer-bg;
+        // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        position: relative;
+        align-items: center;
+        &:focus{
+          outline: none;
+        }
+        &:after{
+          display: inline-block;
+          margin-left: 0.255em;
+          vertical-align: 0.255em;
+          border-right: 0 !important;
+          border-top: 0 !important;
+          border-left: 0 !important;
+          position: absolute;
+          right: 0 !important;
+          content: '\f107 ';
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          margin: 0px 20px 0px 10px;
+          text-decoration: none;
+          font-size: 2rem;
+          color: $text-9;
+        }
+      }
+    
+      .set-border-feedback{
+        border: 1px solid $footer-bg;
+        border-radius: 0px;
+        margin-top: -0.3rem;
+        overflow:auto;
+      
+      }
+    
+      .check-area-mt label{
+        color: $text-9;
+        font-weight: normal !important;
+        font-size: 1.4rem;
+        font-weight:300 !important;
+           padding-top: 0;
+          padding-bottom: 4px;
+          padding-top: 0.4rem;
+          padding: 1rem;
+          padding-left: 2rem;
+          transition: all 0.4s;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+          &:hover{
+            background: $primary;
+            width: 100%;
+            cursor: pointer;
+            color: white !important;
+          }
+      }
+    
+      .disp-hide {
+        .checkmark {
+            display: none;
+        }
+      }
+    
+    }
+     
+    .common-btn-contact {
+      min-width: 17.5rem;
+      height: 5rem;
+      width: 17.5rem;
+      border: none;
+      outline: 0 !important;
+      background: $primary;
+      border-radius: 0rem;
+      font-size: 2rem;
+      color: $white;
+      text-transform: capitalize;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "segoeui";
+      &:hover{
+        background: $heading;
+        color: $white;
+        transition: ease-in-out .4s;
+
+      }
+  }
+
+  .rtl{
+    .address-1{
+      &:after{
+        left: 0rem;
+        right: auto;
+      }
+    }
+    .drop-bottom {
+      .dropdown-toggle{
+        &:after{
+          left: 0 !important;
+          right: auto !important;
+          margin-left: 1.8rem;
+        }
+      }
+    }
+    .sent-massage-mt {
+      .check-area-mt {
+        label{
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .mb-25-bottom{
+    margin-bottom: 2.5rem;
+  }
+
+  .rtl{
+    .ancher-link-contact .contact-info-box .call-us-h {
+      margin-left: 0rem;
+      margin-right: 2.1rem;
+  }
+  }

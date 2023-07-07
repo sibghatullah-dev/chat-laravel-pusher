@@ -1,0 +1,40 @@
+@mixin primary-bg {
+        background: $primary;
+}
+@mixin primary-color {
+        color: $primary;
+}
+@mixin secondary-bg {
+        background: $secondary;
+}
+@mixin secondary-color {
+        color: $secondary;
+}
+@mixin white($property, $value) {
+    #{$property}: #{$value};
+}
+
+
+@mixin font-20 {
+    font-size: 2.0rem;
+}
+@mixin font-weight($value){
+    font-weight:#{$value};
+}
+
+@mixin heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+@mixin paragraph {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.6rem;
+    
+}
+
+@mixin title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}

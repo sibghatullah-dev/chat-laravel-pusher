@@ -1,0 +1,205 @@
+.main-content-manage-card{
+    padding-bottom: 1.4rem;
+    margin-bottom: 2.2rem;
+    border-bottom: 1px solid $footer-bg;
+    
+    .inner-manage{
+        h3{
+            font-size: 2rem;
+            color: $heading;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+          
+        }
+        
+    }
+    .tittle-card{
+        font-size: 1.6rem;
+        color: $heading;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+        .sub-tittle{
+            font-size: 1.6rem;
+            color: $text-p;
+            font-weight: 300;
+            padding-left: 4px;
+
+        }
+
+    }
+    .edit-delete{
+        .fas.fa-trash-alt {
+            font-size: 1.6rem;
+            position: relative;
+            color: $text-9;
+            padding-left: 1.2rem;
+            
+            margin-left: 0.8rem;
+            &:hover{
+                color: $primary;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                height: 2rem;
+                width: 1px;
+                top: -1px;
+                background: $footer-bg;
+                left: 0px;
+            }
+        }
+        i.fas.fa-edit{
+            font-size: 1.6rem;
+            color: $text-9;
+            padding-left: 1.2rem;
+            
+            margin-left: 0.8rem;
+            &:hover{
+                color: $primary;
+            }
+            
+
+        }
+    }
+
+}
+.manage-card-btn-main{
+    margin-bottom: 3.1rem;
+    .serch-btn-mt{
+        min-width: 17rem;
+    }
+}
+.add-card-btn-main{
+    .serch-btn-mt{
+        min-width: 15.0rem;
+        width: 15rem;
+    }
+
+}
+.edit-delete-ha{
+    margin-top: -1rem;
+}
+.manage-card-btn-main-margin{
+    // margin-bottom: 3.5rem !important;
+}
+
+.mt-5-us{
+    margin-top: 0.5rem !important;
+}
+
+
+.rtl{
+    .main-content-manage-card{
+        .edit-delete {
+            i.fas.fa-edit{
+                padding-right: 0rem;
+                padding-left: 0rem;
+                margin-right: 0rem;
+                margin-left: 0rem;
+                &:after{
+                    right: 0px;
+                    left: auto;
+                    top: 0px;
+                }
+            }
+        }
+        .tittle-card{
+            display: flex;
+            .sub-tittle {
+                padding-top: 1px;
+                padding-right: 3px;
+            }
+        }
+    }
+    .main-content-manage-card .edit-delete .fas.fa-trash-alt {
+       
+        padding-left: 0;
+        margin-left: 0;
+        padding-right: 1.2rem;
+        margin-right: 0.8rem;
+    }
+    .main-content-manage-card .edit-delete .fas.fa-trash-alt::after {
+       
+        left: auto;
+        right: 0;
+    }
+}
+
+
+.add-new-address-btn{
+    .serch-btn-mt{
+        min-width: 15rem;
+        width: 15rem;
+        // margin-top: 0.4rem;
+        
+    }
+}
+
+.contact-map-address-page {
+    height: 28.0rem;
+    margin-bottom: 2.6rem;
+}
+
+.main-address-delivery{
+    h4{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $heading;
+        text-transform: capitalize;
+    }
+    p{
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: $text-p;
+    }
+}
+
+
+
+// manage-addresss page cssss
+.manage-address-page{
+    .custom-radio{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $heading;
+        padding-left: 2.8rem;
+        .checkmark {
+            position: absolute;
+            top: -0.1rem;
+            @include large-1199{
+                top: 0.1rem; 
+            }
+            @include m-375{
+                top: -0.2rem;
+            }
+            @include m-325{
+                top: -0.4rem;
+            }
+        }
+
+    }
+}
+.manage-address-content-page {
+    padding-left: 2.8rem;
+    padding-top: 0.9rem;
+    p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $text-p;
+        margin-bottom: 0.4rem;
+    }
+}
+
+.rtl{
+    .manage-address-page{
+        .custom-radio{
+            padding-left: 0;
+            padding-right: 2.8rem;
+        }
+    }
+    .manage-address-content-page{
+        padding-right: 2.8rem;
+        padding-left: 0rem;
+    }
+}
+// end manage address page

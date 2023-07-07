@@ -1,0 +1,77 @@
+.pagination-ctm {
+    background: $white;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    // max-width: 34.0rem;
+    border-radius: 0px;
+    padding: 0.1rem 0rem;
+
+    .page-arow-l {
+        color: $text-p;
+        font-size: 1.4rem;
+        width: 6.5rem;
+        min-width: 6.5rem;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        text-align: center;
+        transition: all .4s;
+        border-radius: 0px;
+        // display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+        .fa-angle-left{
+            padding-right: 0.6rem;
+            font-size: 1.8rem;
+        }
+        .fa-angle-right{
+            padding-left: 0.6rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .my-pagination {
+        margin-bottom: 0px;
+        padding-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // padding: 0rem 1.8rem;
+        .item {
+            padding: 0.3rem 0.4rem;
+            float: left;
+
+            .link {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $text-p;
+                width: 3rem;
+                min-width: 3rem;
+                height: 3rem;
+                line-height: 3rem;
+                text-align: center;
+                transition: all .4s;
+                border-radius: 0px;
+                display: inline-block;
+
+                &:hover,
+                &.active {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+// .rtl {
+//     .page-arow-l{
+//         transform: scaleX(-1);
+//     }
+// }

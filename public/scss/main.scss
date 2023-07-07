@@ -1,0 +1,214 @@
+@import "responsive";
+html{
+  font-size: 10px;
+  @include large-1440 {
+    font-size: 8px;
+  }
+  @include large-1191 {
+    font-size: 8px;
+  }
+
+  @include small-767 {
+    font-size: 7px;
+  }
+  @include m-375 {
+    font-size: 6px;
+  }
+  @include m-325 {
+    font-size: 5px;
+  }
+}
+$body-bg: #fff;
+$heading: #0E0B1C;
+$secondary-heading:#222222;
+$footer_border: #707070;
+
+$text-p-news: #979797;
+$secondary-heading-colr:#0E0B1C;
+$text-9: #999999;
+$cccccc:#cccccc;
+$inner-banner-line: #e6e6e6;
+$footer-bg:#eeeeee;
+$text-9 :#999;
+$text-p :#666;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import "ctm-mixin";
+@import "ctm-rtl";
+@import "fonts";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "classes";
+@import "button";
+@import "breadcrumb/next-banner";
+@import "package/package";
+@import "contact";
+@import "image-upload";
+@import "input";
+@import "auth/login";
+@import "auth/modal-auth";
+@import "margin-padding";
+@import "pagination";
+@import "terms-and-policy";
+@import "tabs";
+@import "header";
+@import "home-silder";
+@import "footer";
+@import "rating";
+@import "product-card";
+@import "category";
+@import "latest-news";
+@import "near-me";
+@import "about-us/about-us";
+@import "product-card/product-detail";
+@import "supplier-info";
+@import "check-dropdown";
+@import "filter-box";
+@import "supplier-page";
+@import "rtlb";
+@import "check-out-scss/check-out-main";
+@import "check-out-scss/check-out";
+@import "profile";
+@import "left-sidebar";
+@import "order";
+@import "favourites";
+@import "manage-card";
+@import "notification/notification";
+@import "switch";
+@import "supplier-profile";
+@import "store-reviews";
+@import "chat/chat-admin";
+@import "chat/chat";
+@import "loader";
+
+$heading: #212B36;
+
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
+.color-primary{
+  color: $primary;
+}
+
+.bg-white {
+  background: #fff !important;
+}
+.text-6{
+  color: #666 !important;
+}
+// .heading{
+//   color: #222 !important;
+// }
+
+.bg-gray {
+  background: #f5f5f5 !important;
+}
+.bg-primary {
+  background: $primary;
+}
+.clearfix {
+  clear: both;
+}
+
+.color-i{
+  color: #bfbfbf !important;
+}
+$bg-gray: #f5f5f5;
+
+$gray-100: #f7f7f7;
+$gray-200: #343434;
+$gray-300: #373737;
+$gray-400: #0b0b0b;
+$gray-600: #666666;
+$gray-800: #888888;
+$dark: $gray-200;
+$border-color: #cccccc;
+$white-bg: #fff;
+
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  // user-drag: none;
+  min-height: 100;
+}
+
+.ltr {
+  direction: ltr !important;
+  text-align: left;
+}
+// ::-webkit-scrollbar {
+//   width: 5px;
+//   height: 5px;
+//   border-radius: 50px;
+//   cursor: pointer;
+// }
+// ::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px #dcdcdc;
+//   border-radius: 50px;
+//   cursor: pointer;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background-color: #7dc855;
+//   outline: none;
+//   border-radius: 50px;
+//   cursor: pointer;
+// }
+.bg-none{
+  background-image: none !important;
+}
+
+
+
+
+
+/*****=========== Mytechnology  SCSS Custom  ================**********/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body {
+  font-family:'segoeui';
+}
+/*
+font-family: 'Josefin Sans', sans-serif;
+*/
+
+// container fluid custom
+
+@media (min-width: 1200px){
+.container{
+  max-width: 1170px;
+}
+}
+
+
+.slick1,.store-slider,.cate-slider-slick{
+  display: none;
+  &.slick-initialized{
+    display: block;
+  }
+}

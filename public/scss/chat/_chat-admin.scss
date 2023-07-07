@@ -1,0 +1,270 @@
+// chat page cssss start
+
+.action-all-mt {
+  i {
+    color: $orange;
+  }
+
+  a {
+
+    font-size: 16px;
+    color: $heading;
+    font-weight: 500 !important;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+
+// chat info bar
+.top-info-ha {
+  background: $primary;
+  padding: 1rem 1.6rem;
+  .arrow-link-ha{
+    .link-admin-admin-arrow-ha{
+      svg{
+        width: 3rem;
+      }
+    }
+  }
+  .user-icon-chat-ha{
+    width: 6rem;
+    height: 6rem;
+    min-width: 6rem;
+    background-color: $white;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.5rem;
+    .fas{
+      color: $primary;
+      font-size: 3rem;
+
+    }
+  }
+
+  .chat-user-namer-ha {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $white;
+  }
+}
+
+.messages-area-ha {
+  max-height: 42.0rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.6rem;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+// sender-msg
+.sender-msg-ha {
+  .user-profile-ha {
+    height: 4rem;
+    width: 4rem;
+    min-width: 4rem;
+    border-radius: 100px;
+    margin-right: 1.2rem;
+  }
+
+  .user-text-ha {
+    font-size: 1.4rem;
+    font-weight: 300;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    background: $primary;
+    border-radius: 0px;
+    color: $white;
+    line-height: 2.4rem;
+    padding: 1rem 1.6rem 1.4rem;
+    // max-width: 49.6rem;
+    max-width: 56rem;
+    // position: relative;
+    @include small-767{
+      max-width: 100%;
+    }
+  }
+
+  .caht-time-ha {
+    // position: absolute;
+    // top:50%;
+    // transform: translateY(-50%);
+    // right:0px;
+    margin-left: 0rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $text-9;
+  }
+}
+
+// sender-msg
+
+// msg received
+.received-msg-ha {
+  .user-profile-ha {
+    height: 4rem;
+    width: 4rem;
+    min-width: 4rem;
+    border-radius: 100px;
+    margin-left: 1.2rem;
+  }
+
+  min-height: 5rem;
+
+  .user-text-ha {
+    font-size: 1.4rem;
+    font-weight: 300;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    line-height: 2.4rem;
+    background: $white;
+    border-radius: 0px;
+    color: $text-9;
+    padding: 1rem 1.6rem 1.4rem;
+    max-width: 56rem;
+    @include small-767{
+      max-width: 100%;
+    }
+  }
+
+  .caht-time-ha {
+    margin-right: 0rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $text-9;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// msg received
+
+
+.msg-form-ha {
+  background: $white;
+  border-top: 1px solid #E6E6E6;
+
+  .msg-type-ha {
+    background: none;
+    border: none;
+    outline: 0;
+    height: 5rem;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: $text-9;
+    padding: 1rem 2rem 1rem 5rem;
+    &::placeholder{
+      color: #ccc;
+      font-weight: 300;
+      text-transform: capitalize;
+      font-size: 1.4rem;
+    }
+  }
+
+  .sned-btn-ha {
+    height: 5rem;
+    line-height: 5rem;
+    background: $primary;
+    color: $white;
+    width: 5rem;
+    text-align: center;
+    border-radius: 0;
+    font-size: 2.2rem;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+  .file-upload-ha {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0.9rem;
+    transform: translateY(-50%);
+  
+    input {
+      display: none;
+    }
+  }
+}
+
+
+
+.messages-content-ha{
+  border: none !important;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+
+// .rtl scss start here
+.rtl {
+  .received-msg-ha{
+    .user-profile-ha{
+      margin-right: 1.2rem;
+    margin-left: 0rem;
+    }
+    
+  }
+  // sender-msg
+  .sender-msg-ha {
+    .user-profile-ha {
+      margin-right: 0rem;
+      margin-left: 1.2rem;
+    }
+
+    .caht-time-ha {
+      margin-left: 0rem;
+      margin-right: 1.4rem;
+    }
+  }
+
+  // sender-msg
+
+  // msg received
+  .received-msg-ha {
+    .caht-time-ha {
+      margin-right: 0rem;
+      margin-left: 0rem;
+    }
+  }
+
+  // msg received
+
+
+  .msg-form-ha {
+    .msg-type-ha {
+      padding: 1rem 5rem 1rem 1rem;
+    }
+  }
+
+  .file-upload-ha {
+    left: auto;
+    right: 0.9rem;
+  }
+}
+
+// .rtl scss start here
